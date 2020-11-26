@@ -1,0 +1,43 @@
+//PROGRAM TO CALCULATE L.C.M.  OF TWO NUMBERS
+<?php
+// Your code here!
+$number1 = 7;
+$number2 = 21;
+$greatest =0;
+
+ if($number1<$number2)
+ {
+     $greatest=$number2;
+ }
+ elseif($number2<$number1)
+ {
+      $greatest=$number1;
+ }
+ else
+ {
+     $greatest=$number2; 
+ }
+   if($number1>0&&$number2>0)
+   {
+         while(1)
+         {
+            if($greatest%$number1==0&& $greatest%$number2==0)
+            {
+                echo('LCM of these numbers is:-');
+                echo(' '.$greatest);
+                break;
+              
+            }
+            else
+            {
+                ++$greatest;
+                continue;
+                
+            }
+         }
+    }
+    else
+    {
+        echo('PLZ ENTER A NUMBER GREATER THAN ZERO');
+    }
+?>

@@ -1,0 +1,45 @@
+// CODE TO PRINT FIRST AND LAST NAME'S CHARACTER IN SERIES.....
+<?php
+// Your code here!
+$first = 'vijay';
+$last= 'kumar';
+$c1=0;
+$c2=0;
+ if(strlen($first)<strlen($last))
+ {
+     $c1=strlen($last);
+     $c2=strlen($first);
+ }
+ elseif(strlen($last)<strlen($first))
+   {
+     $c1=strlen($first);
+     $c2=strlen($last);
+    }
+ else
+   {
+     $c1 = strlen($first);
+     $c2 = strlen($last);
+   }
+    for($counter=0; $counter<$c1; $counter++)
+     {
+      for( $counter2=0; $counter2<$c2; $counter2++)
+         {
+             if($counter==$counter2)
+             {
+                  echo($first[$counter].$last[$counter2]);
+             }
+       
+         }
+         if($counter>=$c2)
+         {
+          if(strlen($last)<strlen($first))
+            {
+              echo($first[$counter]); 
+            }
+          else
+            {
+              echo($last[$counter]); 
+            }
+         }
+    }
+?>
